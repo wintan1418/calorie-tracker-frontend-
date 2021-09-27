@@ -47,6 +47,21 @@ const Assesment = () => {
  if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token') === null) {
    return <Redirect to="/log_in" />;
  }
-
+return (
+  <div>
+    <Navbar title="Add measurement"/>
+    <main>
+      <form onSubmit={(e) => handleCalorieMeasure(e)} className="measurement">
+        <MeasurementForm meal="first_measure" />
+        <MeasurementForm meal="first_measure" />
+        <MeasurementForm meal="first_measure" />
+        <button type="submit">Submit your entry</button>
+      </form>
+    </main>
+    <Footer/>
+  </div>
+);
   
-}
+};
+
+export default Assesment;
