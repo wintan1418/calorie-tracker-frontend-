@@ -41,7 +41,11 @@ const Assesment = () => {
         overall_score: roundedOverAll,
       
       };
-
+      const url = 'heroku/readings';
+      postData(url, userInput);
+ };
+ if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token') === null) {
+   return <Redirect to="/log_in" />;
  }
 
   
