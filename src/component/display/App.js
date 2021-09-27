@@ -7,9 +7,9 @@ import Assesment from './Assesment';
 import Track from '../container/Track';
 import TrackSum from '../container/TrackSum';
 import Progress from '../container/Progress';
-import further from '../container/Further';
-import Error from './Error';
 import Further from '../container/Further';
+import Error from './Error';
+
 
 function App() {
   return(
@@ -27,3 +27,4 @@ function App() {
     </BrowserRouter>
   )
 }
+export default App;
