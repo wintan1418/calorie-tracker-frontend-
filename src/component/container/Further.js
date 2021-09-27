@@ -5,9 +5,26 @@ import PropTypes from 'prop-types';
 import { fetchCurrentUser } from '../../actions/index';
 import UnpackFurther from '../presentation/UnpackMore';
 
-const Further = ({ currentuser, fetchCurrentUser => }) => {
+const Further = ({ currentUser, fetchCurrentUser }) => {
   useEffect (() => {
     fetchCurrentUser();
   }, [fetchCurrentUser]);
   
-}
+  if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token')=== null) {
+    return <Redirect to="/login" />;
+  }
+  return currentUser.currentUser !== undefined
+  ? <UnpackFurther currentUser={currentUser.currentUser} />
+  : <h3>Loading...</h3>;
+};
+
+const mapStateToProps = (state) => ({
+  currentUser: state.currentUser,
+});
+
+export default connect(mapStateToProps, { fetchCurrentUser })(Further);
+
+Further.propTypes = {
+  currentUser: PropTypes.instanceOf(Object).isRequired,
+  fetchCurrentUser: PropTypes.func.isRequired,
+};
