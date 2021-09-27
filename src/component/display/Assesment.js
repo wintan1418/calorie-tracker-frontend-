@@ -29,6 +29,18 @@ const Assesment = () => {
    const blah = e.target[1].value;
    const blah = e.target[2].value;
   
+   const preOverAll = (
+     parseFloat(blah) + parseFloat(blah) + parseFloat(blah))/3;
+
+     const roundedOverAll = Math.round(preOverAll * 10)/ 10;
+   
+      const userInput = {
+        first_measure: blah,
+        first_measure: blah,
+        first_measure: blah,
+        overall_score: roundedOverAll,
+      
+      };
 
  }
 
