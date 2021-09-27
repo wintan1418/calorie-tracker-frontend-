@@ -17,4 +17,15 @@ const Progress = ({ fetchreadingss, readingss }) => {
     ? (<UnpackProgress readingss={readingss.readingss} />)
     : <h2>Loading...</h2>;
 };
+const mapStateToProps = (state) => ({
+  readingss: state.readingss,
+});
+
+export default connect(mapStateToProps, { fetchreadingss })(Progress);
+
+Progress.propTypes = {
+  readingss: PropTypes.instanceOf(Object).isRequired,
+  fetchreadingss: PropTypes.func.isRequired,
+};
+
  
