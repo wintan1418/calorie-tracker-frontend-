@@ -17,3 +17,50 @@ const LogIn = () => {
         history.push('/assesment');
       });
   }
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const userInput = {
+      email: e.target[0].value,
+      password: e.target[1].value,
+    };
+
+    const urlLogIn = '';
+    postData(urlLogIn, userInput);
+  };
+
+  return (
+    <div className="authen-page">
+      <div>
+        <i className="fas fa-user-circle" />
+      </div>
+
+      <form onSubmit={(e) => handleLogin(e)}>
+        <input type="email" placeholder="Your email" required />
+
+        <input type="password" placeholder="Password" required />
+
+        <button type="submit">Log in</button>
+      </form>
+
+      <div className="authen-text">
+        <div>Yet to sign up? click here</div>
+        <div>
+          Go to
+          <Link to="/sign_up"></Link>
+        </div>
+      </div>
+
+      <div className="calorie-text authen-text">
+        <div>
+          
+          {' '}
+          <Link to={{ pathname: '' }} target="_blank">the link</Link>
+          {' '}
+         
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LogIn;
