@@ -40,4 +40,29 @@ const fetchDetailReading = (readingID) => (dispatch) => {
 
     }));
      return() => abortCont.abort();
-}
+};
+
+const fetchCurrentUser = (readingID) => (dispatch) => {
+  const abortCont = new AbortController();
+  const url = `heroku${readingID}`;
+  const token = sessionStorage.getItem('token');
+  fetch(url, {
+    headers: {
+      Authorization: token,
+    },
+  })
+
+    .then((res) => res.json())
+    .then((data) => dispatch({
+      type: FETCH_CURRENT_USER,
+        payload: data,
+
+    }));
+     return() => abortCont.abort();
+};
+
+export {
+  fetchReadings,
+  fetchCurrentUser,
+  fetchDetailReading,
+};
