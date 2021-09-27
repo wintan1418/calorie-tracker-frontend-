@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import { fetchReadings, fetchDetailReadings } from '../../actions/index';
-import TrackMap from '../display/';
+import Map from '../display/';
 
 const Track = ({fetchReadings, fetchDetailReadings, readings}) => {
   useEffect(() => {
@@ -18,7 +18,7 @@ const Track = ({fetchReadings, fetchDetailReadings, readings}) => {
    return <Redirect to="/log_in" />;
 }
 return readings.readings !== undefined
-  ? (<TraceMap readings={readings.readings} clickOnDetailReadings={clickOnDetailReadings} />)
+  ? (<Map readings={readings.readings} clickOnDetailReadings={clickOnDetailReadings} />)
   : <h3>Loading...</h3>;
 };
 
