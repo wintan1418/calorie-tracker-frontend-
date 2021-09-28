@@ -16,3 +16,36 @@ const TrackProgress = ({ readings }) => {
           <div>Blue - actual data</div>
           <div>Red - planned data</div>
         </div>
+        {
+                    currentMeasures
+                      ? (
+                        <div className="progress">
+                          <h3>Current Measure</h3>
+                          <CircularProgressbar value={currentMeasures.overall_score} maxValue={9} text={`Overall Score\n ${currentMeasures.overall_score}`} />
+                          <div className="t-scores">
+                            <div>
+                              <i className="fas fa-" />
+                              <div>
+                                Speaking:
+                                {currentMeasures.first_measure}
+                              </div>
+                            </div>
+                            <div>
+                              <i className="fas fa-headphones" />
+                              <div>
+                                Listening:
+                                {currentMeasures.second_measure}
+                              </div>
+                            </div>
+                            <div>
+                              <i className="fas fa-" />
+                              <div>
+                                Writing:
+                                {currentMeasures.third_measure}
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      )
+                      : <div>Loading...</div>
