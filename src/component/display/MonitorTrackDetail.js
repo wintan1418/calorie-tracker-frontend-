@@ -49,4 +49,8 @@ const MonitorTrackDetail = ({ detailReading }) => {
       <Footer />
     </>
   );
+  export default MonitorTrackDetail;
+
+UnpackTrackDetail.propTypes = {
+  detailReading: PropTypes.instanceOf(Object).isRequired,
 };
