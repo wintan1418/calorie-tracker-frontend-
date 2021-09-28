@@ -15,8 +15,9 @@ const MonitorTrackDetail = ({ detailReading }) => {
     const newdate = `${month}-${day}-${year}`;
     return newdate;
   };
+
   return (
-    <>
+    <><>
       <Navbar title="Calorie-cop" />
       <div className="t-con">
         <div className="t-date">{readableDate(detailReading.created_at)}</div>
@@ -43,14 +44,14 @@ const MonitorTrackDetail = ({ detailReading }) => {
               {detailReading.third_measure}
             </div>
           </div>
-          </div>
         </div>
       </div>
-      <Footer />
-    </>
+    </><Footer /></>
+    
   );
-  export default MonitorTrackDetail;
+};
+export default MonitorTrackDetail;
 
-UnpackTrackDetail.propTypes = {
+MonitorTrackDetail.propTypes = {
   detailReading: PropTypes.instanceOf(Object).isRequired,
 };
