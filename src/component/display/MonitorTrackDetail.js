@@ -15,3 +15,38 @@ const MonitorTrackDetail = ({ detailReading }) => {
     const newdate = `${month}-${day}-${year}`;
     return newdate;
   };
+  return (
+    <>
+      <Navbar title="Calorie-cop" />
+      <div className="t-con">
+        <div className="t-date">{readableDate(detailReading.created_at)}</div>
+        <CircularProgressbar value={detailReading.overall_score} maxValue={9} text={`Overall Score\n ${detailReading.overall_score}`} />
+        <div className="t-scores">
+          <div>
+            <i className="fas fa-mic" />
+            <div>
+              Morning:
+              {detailReading.first_measure}
+            </div>
+          </div>
+          <div>
+            <i className="fas fa-" />
+            <div>
+              Afternoon:
+              {detailReading.second_measure}
+            </div>
+          </div>
+          <div>
+            <i className="fas fa-" />
+            <div>
+              Evening:
+              {detailReading.third_measure}
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
