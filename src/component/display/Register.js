@@ -32,3 +32,35 @@ const SignUp = () => {
     const urlSignUp = 'heroku/signup';
     postData(urlSignUp, userInput);
   };
+  return (
+    <div className="authen-page">
+      <div>
+        <i className="fas fa-user-circle" />
+      </div>
+      <form onSubmit={(e) => handleSignUp(e)}>
+        <input type="text" placeholder="Your name please" required />
+        <input type="email" placeholder="Your email please" required />
+        <input type="password" placeholder="Password" required />
+        <input type="password" placeholder="Confirm password" required />
+
+        <label htmlFor="level_initial">
+          <span>Your current calorie  measure</span>
+          <input type="number" step=".5" min="0" max="9" name="level_initial" id="level_initial" placeholder="Enter 0 ~ 9" required />
+        </label>
+
+        <label htmlFor="level_plan">
+          <span>Your proposed calorie measure</span>
+          <input type="number" step=".5" min="0" max="9" name="level_plan" id="level_plan" placeholder="Enter 0 ~ 9" required />
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+      <div className="authen-text">
+        Back to
+        <Link to="/log_in">Log in page</Link>
+      </div>
+    </div>
+  );
+};
+
+export default Register;
