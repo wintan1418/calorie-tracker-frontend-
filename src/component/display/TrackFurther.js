@@ -21,4 +21,31 @@ const TrackFurther = ({ currentUser }) => (
             {currentUser.level_plan}
           </div>
         </div>
-        <div></div>
+        <div>
+        <i className="fas fa-clipboard" />
+          <div>
+            current calorie state
+            {currentUser.level_initial}
+          </div>
+        </div>
+        <div>
+          <i className="fas fa-envelope" />
+          <div>Mailing list</div>
+        </div>
+        <div>
+          <i className="fas fa-user" />
+          <div>Your profile</div>
+        </div>
+        <div>
+          <i className="fas fa-cog" />
+          <div>Settings</div>
+        </div>
+        <div>
+          <i className="fas fa-question-circle" />
+          <div>Customer service</div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </div>
+);
