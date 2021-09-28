@@ -8,3 +8,18 @@ const Navbar = ({ title }) => {
     sessionStorage.removeItem('token');
     history.push('/log_in');
   };
+  return (
+    <nav>
+      <div className="n-title">{title}</div>
+      <button type="button" onClick={logOut}>
+        <i className="fas fa-power-off" />
+      </button>
+    </nav>
+  );
+};
+
+export default Navbar;
+
+Navbar.propTypes = {
+  title: PropTypes.instanceOf(Object).isRequired,
+};
