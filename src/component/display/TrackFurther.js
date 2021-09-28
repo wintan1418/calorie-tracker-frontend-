@@ -49,3 +49,8 @@ const TrackFurther = ({ currentUser }) => (
     <Footer />
   </div>
 );
+export default TrackFurther;
+
+TrackFurther.propTypes = {
+  currentUser: PropTypes.instanceOf(Object).isRequired,
+};
