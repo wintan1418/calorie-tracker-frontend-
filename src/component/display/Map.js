@@ -47,3 +47,9 @@ const Map = ({ results, clickOnDetailResult }) => {
     </div>
   );
 };
+export default Map;
+
+Map.propTypes = {
+  results: PropTypes.instanceOf(Object).isRequired,
+  clickOnDetailResult: PropTypes.func.isRequired,
+};
