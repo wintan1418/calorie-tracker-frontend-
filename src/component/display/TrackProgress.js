@@ -49,3 +49,16 @@ const TrackProgress = ({ readings }) => {
                         </div>
                       )
                       : <div>Loading...</div>
+                    }
+                    </main>
+                    <Footer />
+                  </div>
+                );
+              };
+              
+              export default TrackProgress;
+              
+              TrackProgress.propTypes = {
+                readings: PropTypes.instanceOf(Object).isRequired,
+              };
+              
