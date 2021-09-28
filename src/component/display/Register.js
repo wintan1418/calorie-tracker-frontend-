@@ -1,6 +1,6 @@
 import { Link, useHistory } from 'react-router-dom';
 
-const SignUp = () => {
+const Register = () => {
   const history = useHistory();
 
   async function postData(url = '', data = {}) {
@@ -17,7 +17,7 @@ const SignUp = () => {
         history.push('/measurement');
       });
   }
-  const handleSignUp = async (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     const userInput = {
       name: e.target[0].value,
@@ -29,15 +29,15 @@ const SignUp = () => {
       due_date: e.target[6].value,
     };
 
-    const urlSignUp = 'heroku/signup';
-    postData(urlSignUp, userInput);
+    const urlregister = 'heroku/register';
+    postData(urlregister, userInput);
   };
   return (
     <div className="authen-page">
       <div>
         <i className="fas fa-user-circle" />
       </div>
-      <form onSubmit={(e) => handleSignUp(e)}>
+      <form onSubmit={(e) => handleRegister(e)}>
         <input type="text" placeholder="Your name please" required />
         <input type="email" placeholder="Your email please" required />
         <input type="password" placeholder="Password" required />
