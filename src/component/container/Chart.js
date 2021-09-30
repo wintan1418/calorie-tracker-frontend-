@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { fetchCurrentUser } from '../../actions/index';
-import UnpackLineChart from '../display/UnpackLineChart';
+import { fetchCurrentUser } from '../../action/index';
+import TrackLineChart from '../display/TrackackLineChart';
 
 const Chart = ({ readings, currentUser, fetchCurrentUser }) => {
   useEffect(() => {
@@ -10,8 +10,8 @@ const Chart = ({ readings, currentUser, fetchCurrentUser }) => {
   }, [fetchCurrentUser]);
 
   return currentUser.currentUser !== undefined
-    ? <UnpackLineChart readings={readings} currentUser={currentUser.currentUser} />
-    : <h2>Loading...</h2>;
+    ? <TrackLineChart readings={readings} currentUser={currentUser.currentUser} />
+    : <h3>Buffering...</h3>;
 };
 
 const mapStateToProps = (state) => ({
