@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import '../../circle-styling.css';
 
-const Map = ({ results, clickOnDetailResult }) => {
+const Map = ({ results, clickOnDetailReadings }) => {
   const readableDate = (defDateFormat) => {
     const dateObj = new Date(defDateFormat);
 
@@ -25,18 +25,18 @@ const Map = ({ results, clickOnDetailResult }) => {
                     results.slice(0).reverse().map((res) => (
                       <Link
                         to={{
-                          pathname: `/track/${res.id}`,
+                          pathname: `/tracker/${res.id}`,
                           state: res,
                         }}
                         key={res.id}
-                        onClick={() => clickOnDetailResult(res.id)}
-                        className="track-item"
+                        onClick={() => clickOnDetailReadings(res.id)}
+                        className="measuretrack-item"
                       >
-                        <CircularProgressbar value={res.overall_score} maxValue={9} />
+                        <CircularProgressbar value={res.overall_measure} maxValue={9} />
                         <div>{readableDate(res.created_at)}</div>
                         <div>
-                          <div>{res.overall_score}</div>
-                          <div>score</div>
+                          <div>{res.overall_meausre}</div>
+                          <div>reading</div>
                         </div>
                         <i className="fas fa-arrow-circle-right" />
                       </Link>
@@ -50,6 +50,6 @@ const Map = ({ results, clickOnDetailResult }) => {
 export default Map;
 
 Map.propTypes = {
-  results: PropTypes.instanceOf(Object).isRequired,
-  clickOnDetailResult: PropTypes.func.isRequired,
+  readings: PropTypes.instanceOf(Object).isRequired,
+  clickOnDetailReadings: PropTypes.func.isRequired,
 };
