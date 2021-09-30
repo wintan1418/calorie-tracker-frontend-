@@ -2,7 +2,7 @@ import React from 'react';
 import { Chart } from 'react-charts';
 import PropTypes from 'prop-types';
 
-const UnpackLineChart = ({ readings, currentUser }) => {
+const TrackLineChart = ({ readings, currentUser }) => {
   function defChartData(readings) {
     const arr = [];
     readings.map((res) => {
@@ -19,8 +19,8 @@ const UnpackLineChart = ({ readings, currentUser }) => {
   }
 
   function defPlannedChartData() {
-    const proposedMeasure = parseFloat(currentUser.level_plan);
-    const presentMeasure = parseFloat(currentUser.level_initial);
+    const proposedMeasure = parseFloat(currentUser.present_measure);
+    const presentMeasure = parseFloat(currentUser.proposed_measure);
     const diffScore = proposedMeasure - presentMeasure;
 
     const executionPeriod = 30;
@@ -67,8 +67,8 @@ const UnpackLineChart = ({ readings, currentUser }) => {
   return lineChart;
 };
 
-export default UnpackLineChart;
+export default TrackLineChart;
 
-UnpackLineChart.propTypes = {
+TrackLineChart.propTypes = {
   currentUser: PropTypes.instanceOf(Object).isRequired,
 };
