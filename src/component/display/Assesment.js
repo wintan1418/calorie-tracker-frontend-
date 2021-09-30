@@ -2,7 +2,7 @@ import React from "react";
 import {Redirect, useHistory} from 'react-router-dom'
 import Navbar from './Navbar';
 import Footer from './Footer';
-import AssesmentForm from './AssessmentForm';
+import AssessmentForm from './AssessmentForm';
 
 
 const Assesment = () => {
@@ -20,25 +20,25 @@ const Assesment = () => {
     });
     return response.json()
     .then(() => {
-      history.push('/track');
+      history.push('/tracker');
     });
   }
  const handleCalorieMeasure = (e) => {
    e.preventDefault();
-   const blah = e.target[0].value;
-   const blah = e.target[1].value;
-   const blah = e.target[2].value;
+   const first_measure = e.target[0].value;
+   const second_measure = e.target[1].value;
+   const third_measure = e.target[2].value;
   
    const preOverAll = (
-     parseFloat(blah) + parseFloat(blah) + parseFloat(blah))/3;
+     parseFloat(first_measure) + parseFloat(second_measure) + parseFloat(thirtd_measure))/3;
 
      const roundedOverAll = Math.round(preOverAll * 10)/ 10;
    
       const userInput = {
-        first_measure: blah,
-        first_measure: blah,
-        first_measure: blah,
-        overall_score: roundedOverAll,
+        first_measure_reading: first_measure,
+        second_measure_reading: second_measure,
+        third_measure_reading: third_measure,
+        overall_measure: roundedOverAll,
       
       };
       const url = 'heroku/readings';
@@ -52,9 +52,9 @@ return (
     <Navbar title="Add measurement"/>
     <main>
       <form onSubmit={(e) => handleCalorieMeasure(e)} className="measurement">
-        <MeasurementForm meal="first_measure" />
-        <MeasurementForm meal="first_measure" />
-        <MeasurementForm meal="first_measure" />
+        <AssessmentForm meal="first_measure_reading" />
+        <AssessmentForm meal="second_measure_reading" />
+        <AssessmentForm meal="third_measure_reading" />
         <button type="submit">Submit your entry</button>
       </form>
     </main>
