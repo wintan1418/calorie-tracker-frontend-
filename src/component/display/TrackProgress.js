@@ -24,21 +24,21 @@ const TrackProgress = ({ readings }) => {
                           <CircularProgressbar value={currentMeasures.overall_score} maxValue={9} text={`Overall Score\n ${currentMeasures.overall_score}`} />
                           <div className="t-scores">
                             <div>
-                              <i className="fas fa-" />
+                              <i className="fas fa-heartbeat" />
                               <div>
                                 first_measure:
                                 {currentMeasures.first_measure}
                               </div>
                             </div>
                             <div>
-                              <i className="fas fa-headphones" />
+                              <i className="fas fa-heartbeat" />
                               <div>
                                 second_measure:
                                 {currentMeasures.second_measure}
                               </div>
                             </div>
                             <div>
-                              <i className="fas fa-" />
+                              <i className="fas fa-heartbeat" />
                               <div>
                                 third_measure:
                                 {currentMeasures.third_measure}

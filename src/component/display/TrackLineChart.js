@@ -46,6 +46,7 @@ const TrackLineChart = ({ readings, currentUser }) => {
       defChartData(readings),
       defPlannedChartData(),
     ],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [readings],
   );
 
