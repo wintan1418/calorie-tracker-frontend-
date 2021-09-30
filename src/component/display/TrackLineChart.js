@@ -27,8 +27,8 @@ const UnpackLineChart = ({ readings, currentUser }) => {
 
     const requiredDailyProgress = diffScore / executionPeriod;
 
-    const arr = [[0, initialScore]];
-    let current = initialScore;
+    const arr = [[0, presentMeasure]];
+    let current = presentMeasure;
     for (let i = 1; i <= executionPeriod; i += 1) {
       arr.push([i, current += requiredDailyProgress]);
     }
@@ -39,3 +39,36 @@ const UnpackLineChart = ({ readings, currentUser }) => {
     };
 
     return output;
+  }
+
+  const data = React.useMemo(
+    () => [
+      defChartData(readings),
+      defPlannedChartData(),
+    ],
+    [readings],
+  );
+
+  const axes = React.useMemo(
+    () => [
+      { primary: true, type: 'linear', position: 'bottom' },
+      { type: 'linear', position: 'left' },
+    ],
+    [],
+  );
+
+  const lineChart = (
+    // A react-chart hyper-responsively and continuously fills the available
+    // space of its parent element automatically
+    <div className="graph">
+      <Chart data={data} axes={axes} />
+    </div>
+  );
+  return lineChart;
+};
+
+export default UnpackLineChart;
+
+UnpackLineChart.propTypes = {
+  currentUser: PropTypes.instanceOf(Object).isRequired,
+};

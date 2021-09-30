@@ -26,21 +26,21 @@ const TrackProgress = ({ readings }) => {
                             <div>
                               <i className="fas fa-" />
                               <div>
-                                Speaking:
+                                first_measure:
                                 {currentMeasures.first_measure}
                               </div>
                             </div>
                             <div>
                               <i className="fas fa-headphones" />
                               <div>
-                                Listening:
+                                second_measure:
                                 {currentMeasures.second_measure}
                               </div>
                             </div>
                             <div>
                               <i className="fas fa-" />
                               <div>
-                                Writing:
+                                third_measure:
                                 {currentMeasures.third_measure}
                               </div>
                             </div>

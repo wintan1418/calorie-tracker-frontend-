@@ -37,11 +37,11 @@ const TrackFurther = ({ currentUser }) => (
           <div>Your profile</div>
         </div>
         <div>
-          <i className="fas fa-cog" />
+          <i className="fas fa-wrench" />
           <div>Settings</div>
         </div>
         <div>
-          <i className="fas fa-question-circle" />
+          <i className="fas fa-phone" />
           <div>Customer service</div>
         </div>
       </div>
