@@ -14,19 +14,18 @@ const Register = () => {
     return response.json()
       .then((data) => {
         sessionStorage.setItem('token', JSON.stringify(data.auth_token));
-        history.push('/measurement');
+        history.push('/assesment');
       });
   }
   const handleRegister = async (e) => {
     e.preventDefault();
     const userInput = {
-      name: e.target[0].value,
+      username: e.target[0].value,
       email: e.target[1].value,
       password: e.target[2].value,
-      password_confirmation: e.target[3].value,
-      level_initial: e.target[4].value,
-      level_plan: e.target[5].value,
-      due_date: e.target[6].value,
+      present_measure: e.target[3].value,
+      proposed_measure: e.target[4].value,
+      due_date: e.target[5].value,
     };
 
     const urlregister = 'heroku/register';
@@ -41,14 +40,13 @@ const Register = () => {
         <input type="text" placeholder="Your name please" required />
         <input type="email" placeholder="Your email please" required />
         <input type="password" placeholder="Password" required />
-        <input type="password" placeholder="Confirm password" required />
 
-        <label htmlFor="level_initial">
+        <label htmlFor="present_measure">
           <span>Your current calorie  measure</span>
           <input type="number" step=".5" min="0" max="9" name="level_initial" id="level_initial" placeholder="Enter 0 ~ 9" required />
         </label>
 
-        <label htmlFor="level_plan">
+        <label htmlFor="proposed_measure">
           <span>Your proposed calorie measure</span>
           <input type="number" step=".5" min="0" max="9" name="level_plan" id="level_plan" placeholder="Enter 0 ~ 9" required />
         </label>
