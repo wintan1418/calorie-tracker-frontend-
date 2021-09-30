@@ -18,7 +18,7 @@ const Footer = () => (
       </li>
       <li>
         <Link to={{
-          pathname: '/track',
+          pathname: '/tracker',
         }}
         >
           <span className="f-icons">

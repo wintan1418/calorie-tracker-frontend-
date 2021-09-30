@@ -6,9 +6,7 @@ const LogIn = () => {
   async function postData(url = '', data = {}) {
     const response = await fetch(url, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json', },
       body: JSON.stringify(data),
     });
     return response.json()
@@ -51,13 +49,6 @@ const LogIn = () => {
       </div>
 
       <div className="calorie-text authen-text">
-        <div>
-          
-          {' '}
-          <Link to={{ pathname: '' }} target="_blank">the link</Link>
-          {' '}
-         
-        </div>
       </div>
     </div>
   );
