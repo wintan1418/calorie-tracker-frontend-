@@ -3,23 +3,22 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { fetchDetailreadings } from '../../actions';
-import UnpackTrackDetail from '../display/UnpackTrackDetail';
+import MonitorTrackDetail from '../display/MonitorTrackDetail';
 
-const TrackDetail = ({ detailreadings, fetchDetailreadings }) => {
+const TrackDetail = ({ detailReadings, fetchDetailReadings }) => {
   const { id } = useParams();
   useEffect(() => {
     fetchDetailreadings(id);
-  }, [fetchDetailreadings, id]);
+  }, [fetchDetailReadings, id]);
 
   return (
     <main>
       {
-          Object.keys(detailreadings).length !== 0
-            ? <UnpackTrackDetail detailreadings={detailreadings.detailreadings} />
+          Object.keys(detailReadings).length !== 0
+            ? <MonitorTrackDetail detailReadings={detailReadings.detailReadings} />
             : (
               <h3>
-                Loading...
-              </h3>
+                Loading... </h3>
             )
         }
     </main>
@@ -27,12 +26,12 @@ const TrackDetail = ({ detailreadings, fetchDetailreadings }) => {
 };
 
 const mapStateToProps = (state) => ({
-  detailreadings: state.detailreadings,
+  detailreadings: state.detailReadings,
 });
 
 export default connect(mapStateToProps, { fetchDetailreadings })(TrackDetail);
 
 TrackDetail.propTypes = {
-  detailreadings: PropTypes.instanceOf(Object).isRequired,
+  detailReadings: PropTypes.instanceOf(Object).isRequired,
   fetchDetailreadings: PropTypes.func.isRequired,
 };
