@@ -30,7 +30,7 @@ const Assesment = () => {
    const third_measure = e.target[2].value;
   
    const preOverAll = (
-     parseFloat(first_measure) + parseFloat(second_measure) + parseFloat(thirtd_measure))/3;
+     parseFloat(first_measure) + parseFloat(second_measure) + parseFloat(third_measure))/3;
 
      const roundedOverAll = Math.round(preOverAll * 10)/ 10;
    
