@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { fetchCurrentUser } from '../../actions/index';
-import UnpackFurther from '../presentation/UnpackMore';
+import { fetchCurrentUser } from '../../action/index';
+import TrackFurther from '../display/TrackFurther';
 
 const Further = ({ currentUser, fetchCurrentUser }) => {
   useEffect (() => {
@@ -14,7 +14,7 @@ const Further = ({ currentUser, fetchCurrentUser }) => {
     return <Redirect to="/login" />;
   }
   return currentUser.currentUser !== undefined
-  ? <UnpackFurther currentUser={currentUser.currentUser} />
+  ? <TrackFurther currentUser={currentUser.currentUser} />
   : <h3>Loading...</h3>;
 };
 

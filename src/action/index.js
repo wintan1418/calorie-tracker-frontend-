@@ -2,7 +2,7 @@ import {
   FETCH_READINGS,
   FETCH_DETAIL_READINGS,
   FETCH_CURRENT_USER,
-} from './types';
+} from './categories';
 
 const fetchReadings =() => (dispatch) => {
   const abortCont = new AbortController();
@@ -42,9 +42,9 @@ const fetchDetailReading = (readingID) => (dispatch) => {
      return() => abortCont.abort();
 };
 
-const fetchCurrentUser = (readingID) => (dispatch) => {
+const fetchCurrentUser = () => (dispatch) => {
   const abortCont = new AbortController();
-  const url = `heroku${readingID}`;
+  const url = 'heroku$';
   const token = sessionStorage.getItem('token');
   fetch(url, {
     headers: {
@@ -62,7 +62,5 @@ const fetchCurrentUser = (readingID) => (dispatch) => {
 };
 
 export {
-  fetchReadings,
-  fetchCurrentUser,
-  fetchDetailReading,
+  fetchReadings,fetchCurrentUser, fetchDetailReading,
 };
