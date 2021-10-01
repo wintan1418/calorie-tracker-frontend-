@@ -41,7 +41,7 @@ const Assesment = () => {
         overall_measure: roundedOverAll,
       
       };
-      const url = 'heroku/readings';
+      const url = 'https://welltrack-api.herokuapp.com//readings';
       postData(url, userInput);
  };
  if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token') === null) {

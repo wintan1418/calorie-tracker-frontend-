@@ -2,30 +2,30 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { fetchreadingss } from '../../actions';
-import UnpackProgress from '../presentation/UnpackProgress';
+import { fetchReadings } from '../../action/index';
+import UnpackProgress from '../display/TrackProgress';
 
-const Progress = ({ fetchreadingss, readingss }) => {
+const Progress = ({ fetchReadings, readings }) => {
   useEffect(() => {
-    fetchreadingss();
-  }, [fetchreadingss]);
+    fetchReadings();
+  }, [fetchReadings]);
 
   if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token') === null) {
     return <Redirect to="/log_in" />;
   }
-  return readingss.readingss !== undefined
-    ? (<UnpackProgress readingss={readingss.readingss} />)
+  return readings.readings !== undefined
+    ? (<UnpackProgress readings={readings.readings} />)
     : <h2>Loading...</h2>;
 };
 const mapStateToProps = (state) => ({
-  readingss: state.readingss,
+  readings: state.readings,
 });
 
-export default connect(mapStateToProps, { fetchreadingss })(Progress);
+export default connect(mapStateToProps, { fetchReadings })(Progress);
 
 Progress.propTypes = {
-  readingss: PropTypes.instanceOf(Object).isRequired,
-  fetchreadingss: PropTypes.func.isRequired,
+  readings: PropTypes.instanceOf(Object).isRequired,
+  fetchReadings: PropTypes.func.isRequired,
 };
 
  

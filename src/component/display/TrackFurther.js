@@ -13,7 +13,7 @@ const TrackFurther = ({ currentUser }) => (
           <div className="m-email">{currentUser.email}</div>
         </div>
       </div>
-      <div className="more-list">
+      <div className="further-list">
         <div>
           <i className="fas fa-crosshairs" />
           <div>

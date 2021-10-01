@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchCurrentUser } from '../../action/index';
-import TrackLineChart from '../display/TrackackLineChart';
+import TrackLineChart from '../display/TrackLineChart';
 
 const Chart = ({ readings, currentUser, fetchCurrentUser }) => {
   useEffect(() => {

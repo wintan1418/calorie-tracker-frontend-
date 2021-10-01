@@ -22,7 +22,7 @@ const LogIn = () => {
       password: e.target[1].value,
     };
 
-    const urlLogIn = '';
+    const urlLogIn = 'https://welltrack-api.herokuapp.com/auth/login';
     postData(urlLogIn, userInput);
   };
 
@@ -44,7 +44,7 @@ const LogIn = () => {
         <div>Yet to sign up? click here</div>
         <div>
           Go to
-          <Link to="/sign_up"></Link>
+          <Link to="/sign_up">Sign up page</Link>
         </div>
       </div>
 

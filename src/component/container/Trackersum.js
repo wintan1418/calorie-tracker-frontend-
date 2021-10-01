@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
-import { fetchDetailreadings } from '../../actions';
+import { fetchDetailReadings } from '../../action/index';
 import MonitorTrackDetail from '../display/MonitorTrackDetail';
 
 const TrackDetail = ({ detailReadings, fetchDetailReadings }) => {
   const { id } = useParams();
   useEffect(() => {
-    fetchDetailreadings(id);
+    fetchDetailReadings(id);
   }, [fetchDetailReadings, id]);
 
   return (
@@ -29,9 +29,9 @@ const mapStateToProps = (state) => ({
   detailreadings: state.detailReadings,
 });
 
-export default connect(mapStateToProps, { fetchDetailreadings })(TrackDetail);
+export default connect(mapStateToProps, { fetchDetailReadings })(TrackDetail);
 
 TrackDetail.propTypes = {
   detailReadings: PropTypes.instanceOf(Object).isRequired,
-  fetchDetailreadings: PropTypes.func.isRequired,
+  fetchDetailReadings: PropTypes.func.isRequired,
 };

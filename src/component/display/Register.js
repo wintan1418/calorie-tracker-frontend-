@@ -25,10 +25,13 @@ const Register = () => {
       password: e.target[2].value,
       present_measure: e.target[3].value,
       proposed_measure: e.target[4].value,
-      due_date: e.target[5].value,
+      age: e.target[5].value,
+      sex: e.target[6].value
+  
+      
     };
 
-    const urlregister = 'heroku/register';
+    const urlregister = 'http://localhost:3000/signup';
     postData(urlregister, userInput);
   };
   return (
@@ -37,18 +40,21 @@ const Register = () => {
         <i className="fas fa-user-circle" />
       </div>
       <form onSubmit={(e) => handleRegister(e)}>
-        <input type="text" placeholder="Your name please" required />
+        <input type="text" placeholder="Your username please" required />
         <input type="email" placeholder="Your email please" required />
         <input type="password" placeholder="Password" required />
+        <input type="age" placeholder="Your age please" required />
+        <input type="sex" placeholder="male/female" required />
+      
 
         <label htmlFor="present_measure">
           <span>Your current calorie  measure</span>
-          <input type="number" step=".5" min="0" max="9" name="level_initial" id="level_initial" placeholder="Enter 0 ~ 9" required />
+          <input type="number" step=".5" min="0" max="20" name="present_measure" id="present_measure" placeholder="Enter 0 ~ 9" required />
         </label>
 
         <label htmlFor="proposed_measure">
           <span>Your proposed calorie measure</span>
-          <input type="number" step=".5" min="0" max="9" name="level_plan" id="level_plan" placeholder="Enter 0 ~ 9" required />
+          <input type="number" step=".5" min="0" max="20" name="proposed_measure" id="proposed_measure" placeholder="Enter 0 ~ 9" required />
         </label>
 
         <button type="submit">Submit</button>

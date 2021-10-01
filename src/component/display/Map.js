@@ -3,7 +3,7 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import PropTypes from 'prop-types';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import '../../circle-styling.css';
+// import '../../circle-styling.css';
 
 const Map = ({ results, clickOnDetailReadings }) => {
   const readableDate = (defDateFormat) => {

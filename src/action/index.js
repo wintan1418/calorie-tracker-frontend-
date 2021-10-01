@@ -6,7 +6,7 @@ import {
 
 const fetchReadings =() => (dispatch) => {
   const abortCont = new AbortController();
-  const url = 'heroku';
+  const url = 'https://welltrack-api.herokuapp.com/';
   const token = sessionStorage.getItem('token')
   fetch(url, {
     headers: {
@@ -23,9 +23,9 @@ const fetchReadings =() => (dispatch) => {
     return () => abortCont.abort();
 };
 
-const fetchDetailReading = (readingID) => (dispatch) => {
+const fetchDetailReadings = (readingID) => (dispatch) => {
   const abortCont = new AbortController();
-  const url = `heroku${readingID}`;
+  const url = `https://welltrack-api.herokuapp.com/${readingID}`;
   const token = sessionStorage.getItem('token');
   fetch(url, {
     headers: {
@@ -44,7 +44,7 @@ const fetchDetailReading = (readingID) => (dispatch) => {
 
 const fetchCurrentUser = () => (dispatch) => {
   const abortCont = new AbortController();
-  const url = 'heroku$';
+  const url = 'https://welltrack-api.herokuapp.com/$';
   const token = sessionStorage.getItem('token');
   fetch(url, {
     headers: {
@@ -62,5 +62,5 @@ const fetchCurrentUser = () => (dispatch) => {
 };
 
 export {
-  fetchReadings,fetchCurrentUser, fetchDetailReading,
+  fetchReadings,fetchCurrentUser, fetchDetailReadings,
 };

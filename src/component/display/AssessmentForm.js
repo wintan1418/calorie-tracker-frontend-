@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {CircularProgressbar } from 'react-circular-progressbar';
 import PropTypes from 'prop-types';
-import '../../circle-styling.css';
+// import '../../circle-styling.css';
 
 const AssessmentForm = ({ measure }) => {
   const [cirValue, setcircleValue] = useState(0);

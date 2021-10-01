@@ -22,7 +22,7 @@ const MonitorTrackDetail = ({ detailReading }) => {
       <div className="t-con">
         <div className="t-date">{readableDate(detailReading.created_at)}</div>
         <CircularProgressbar value={detailReading.overall_score} maxValue={9} text={`Overall Score\n ${detailReading.overall_score}`} />
-        <div className="t-scores">
+        <div className="t-measures">
           <div>
             <i className="fas fa-mic" />
             <div>

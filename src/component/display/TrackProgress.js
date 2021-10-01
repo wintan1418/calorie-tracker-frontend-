@@ -22,7 +22,7 @@ const TrackProgress = ({ readings }) => {
                         <div className="progress">
                           <h3>Current Measure</h3>
                           <CircularProgressbar value={currentMeasures.overall_score} maxValue={9} text={`Overall Score\n ${currentMeasures.overall_score}`} />
-                          <div className="t-scores">
+                          <div className="t-measures">
                             <div>
                               <i className="fas fa-heartbeat" />
                               <div>

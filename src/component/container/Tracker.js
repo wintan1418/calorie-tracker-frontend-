@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
-import { fetchReadings, fetchDetailReadings } from '../../action/index';
-import Map from '../display/';
+import { fetchReadings, fetchDetailReadings } from '../../action/';
+import Map from '../display/Map';
 
 const Tracker = ({fetchReadings, fetchDetailReadings, readings}) => {
   useEffect(() => {
@@ -29,7 +29,7 @@ const mapStateToProps = (state) => ({
 export default connect(mapStateToProps, { fetchReadings, fetchDetailReadings })(Tracker);
 
 Tracker.propTypes = {
-  readingss: PropTypes.instanceOf(Object).isRequired,
-  fetchreadingss: PropTypes.func.isRequired,
+  readings: PropTypes.instanceOf(Object).isRequired,
+  fetchreadings: PropTypes.func.isRequired,
   fetchDetailreadings: PropTypes.func.isRequired,
 };
