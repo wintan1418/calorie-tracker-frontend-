@@ -31,7 +31,7 @@ const Register = () => {
       
     };
 
-    const urlregister = 'http://localhost:3000/signup';
+    const urlregister = 'http://localhost:3000/register';
     postData(urlregister, userInput);
   };
   return (

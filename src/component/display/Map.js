@@ -3,9 +3,9 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import PropTypes from 'prop-types';
 import Navbar from './Navbar';
 import Footer from './Footer';
-// import '../../circle-styling.css';
+import '../../circle.css';
 
-const Map = ({ results, clickOnDetailReadings }) => {
+const Map = ({ readings, clickOnDetailReadings }) => {
   const readableDate = (defDateFormat) => {
     const dateObj = new Date(defDateFormat);
 
@@ -22,7 +22,7 @@ const Map = ({ results, clickOnDetailReadings }) => {
       <Navbar title="calorie-cop" />
       <main className="track">
         {
-                    results.slice(0).reverse().map((res) => (
+                    readings.slice(0).reverse().map((res) => (
                       <Link
                         to={{
                           pathname: `/tracker/${res.id}`,

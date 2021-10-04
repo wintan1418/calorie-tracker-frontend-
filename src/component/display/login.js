@@ -44,7 +44,7 @@ const LogIn = () => {
         <div>Yet to sign up? click here</div>
         <div>
           Go to
-          <Link to="/sign_up">Sign up page</Link>
+          <Link to="/register">Sign up page</Link>
         </div>
       </div>
 

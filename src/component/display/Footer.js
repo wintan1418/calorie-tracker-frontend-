@@ -5,7 +5,7 @@ const Footer = () => (
     <ul className="f-con">
       <li>
         <Link to={{
-          pathname: '/measurement',
+          pathname: '/assesment',
         }}
         >
           <span className="f-icons">

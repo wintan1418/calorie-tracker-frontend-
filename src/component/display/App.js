@@ -2,7 +2,7 @@ import {
   BrowserRouter, Switch, Route,
 } from 'react-router-dom';
 import LogIn from './login';
-import SignUp from './Register';
+import Register from './Register';
 import Assesment from './Assesment';
 import Tracker from '../container/Tracker';
 import TrackDetail from '../container/Trackersum';
@@ -17,12 +17,13 @@ function App() {
     <BrowserRouter>
     <Switch>
       <Route exact path="/log_in" component={LogIn} />
-      <Route exact path="/sign_up" component={SignUp} />
+      <Route exact path="/Register" component={Register} />
       <Route exact path="/Assesment" component={Assesment} />
-      <Route exact path="/track" component={Tracker} />
+      <Route exact path="/tracker" component={Tracker} />
       <Route exact path="/track/:id" component={TrackDetail} />
       <Route exact path="/progress" component={Progress} />
       <Route exact path="/further" component={Further} />
+      <Route exact path="/" component={LogIn} />
       <Route component={Error} />
     </Switch>
     </BrowserRouter>

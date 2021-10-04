@@ -17,7 +17,7 @@ const TrackDetail = ({ detailReadings, fetchDetailReadings }) => {
           Object.keys(detailReadings).length !== 0
             ? <MonitorTrackDetail detailReadings={detailReadings.detailReadings} />
             : (
-              <h3>
+              <h3 className="t-empty">
                 Loading... </h3>
             )
         }

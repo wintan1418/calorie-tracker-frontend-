@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { fetchReadings } from '../../action/index';
-import UnpackProgress from '../display/TrackProgress';
+import TrackProgress from '../display/TrackProgress';
 
 const Progress = ({ fetchReadings, readings }) => {
   useEffect(() => {
@@ -14,7 +14,7 @@ const Progress = ({ fetchReadings, readings }) => {
     return <Redirect to="/log_in" />;
   }
   return readings.readings !== undefined
-    ? (<UnpackProgress readings={readings.readings} />)
+    ? (<TrackProgress readings={readings.readings} />)
     : <h2>Loading...</h2>;
 };
 const mapStateToProps = (state) => ({
