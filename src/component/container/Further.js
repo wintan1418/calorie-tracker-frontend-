@@ -13,8 +13,8 @@ const Further = ({ currentUser, fetchCurrentUser }) => {
   if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token')=== null) {
     return <Redirect to="/login" />;
   }
-  return currentUser.currentUser !== undefined
-  ? <TrackFurther currentUser={currentUser.currentUser} />
+  return currentUser !== undefined
+  ? <TrackFurther currentUser={currentUser} />
   : <h3>Loading...</h3>;
 };
 

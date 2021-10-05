@@ -6,11 +6,11 @@ import {
 
 const fetchReadings =() => (dispatch) => {
   const abortCont = new AbortController();
-  const url = 'https://juwons.herokuapp.com/readings';
+  const url = 'http://127.0.0.1:3005/readings';
   const token = sessionStorage.getItem('token')
   fetch(url, {
     headers: {
-      Authorization: token,
+      Authorization: `Bearer ${token}`,
     },
   })
     .then((res) => res.json())
@@ -25,11 +25,11 @@ const fetchReadings =() => (dispatch) => {
 
 const fetchDetailReadings = (readingID) => (dispatch) => {
   const abortCont = new AbortController();
-  const url = `https://welltrack-api.herokuapp.com/readings/${readingID}`;
+  const url = `http://127.0.0.1:3005/readings/${readingID}`;
   const token = sessionStorage.getItem('token');
   fetch(url, {
     headers: {
-      Authorization: token,
+      Authorization: `Bearer ${token}`,
     },
   })
 
@@ -44,7 +44,7 @@ const fetchDetailReadings = (readingID) => (dispatch) => {
 
 const fetchCurrentUser = () => (dispatch) => {
   const abortCont = new AbortController();
-  const url = 'https://wintan.herokuapp.com/info';
+  const url = 'http://127.0.0.1:3000/info';
   const token = sessionStorage.getItem('token');
   fetch(url, {
     headers: {

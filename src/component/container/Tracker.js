@@ -16,10 +16,11 @@ const Tracker = ({fetchReadings, fetchDetailReadings, readings}) => {
 
   if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token') === null) {
    return <Redirect to="/log_in" />;
-}
-return readings.readings !== undefined
-  ? (<Map readings={readings.readings} clickOnDetailReadings={clickOnDetailReadings} />)
-  : <h3 className="t-empty">Loading...</h3>;
+  }
+  console.log(readings, readings.readings)
+return readings !== undefined
+  ? (<Map readings={readings} clickOnDetailReadings={clickOnDetailReadings} />)
+  : <h3 className="t-empty">Wait While Loading...</h3>;
 };
 
 

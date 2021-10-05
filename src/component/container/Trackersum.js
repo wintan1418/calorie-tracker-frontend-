@@ -10,12 +10,12 @@ const TrackDetail = ({ detailReadings, fetchDetailReadings }) => {
   useEffect(() => {
     fetchDetailReadings(id);
   }, [fetchDetailReadings, id]);
-
+  console.log(detailReadings)
   return (
     <main>
       {
           Object.keys(detailReadings).length !== 0
-            ? <MonitorTrackDetail detailReadings={detailReadings.detailReadings} />
+            ? <MonitorTrackDetail detailReading={detailReadings} />
             : (
               <h3 className="t-empty">
                 Loading... </h3>
@@ -26,7 +26,7 @@ const TrackDetail = ({ detailReadings, fetchDetailReadings }) => {
 };
 
 const mapStateToProps = (state) => ({
-  detailreadings: state.detailReadings,
+  detailReadings: state.detailReading,
 });
 
 export default connect(mapStateToProps, { fetchDetailReadings })(TrackDetail);

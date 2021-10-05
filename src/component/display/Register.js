@@ -32,7 +32,7 @@ const Register = () => {
       
     };
 
-    const urlregister = 'https://juwons.herokuapp.com/register';
+    const urlregister = 'http://127.0.0.1:3000/register';
     postData(urlregister, userInput);
   };
   return (

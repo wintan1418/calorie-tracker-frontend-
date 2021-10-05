@@ -9,12 +9,13 @@ const Assesment = () => {
   const history = useHistory();
 
   async function postData(url ='', data = {}) {
+    console.log(data);
     const token = sessionStorage.getItem('token');
     const response = await fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: token,
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(data),
     });
@@ -25,9 +26,9 @@ const Assesment = () => {
   }
  const handleAddingCalories = (e) => {
    e.preventDefault();
-   const first_measure_reading = e.target[0].value;
-   const second_measure_reading = e.target[1].value;
-   const third_measure_reading = e.target[2].value;
+   const first = e.target[0].value;
+   const second = e.target[1].value;
+   const third_= e.target[2].value;
   
   //  const preOverAll = (
   //    parseFloat(first_measure_reading) + parseFloat(second_measure_reading) + parseFloat(third_measure_reading))/3;
@@ -35,13 +36,13 @@ const Assesment = () => {
   //    const roundedOverAll = Math.round(preOverAll * 10)/ 10;
    
       const userInput = {
-        first_measure: first_measure_reading,
-        second_measure: second_measure_reading,
-        third_measure: third_measure_reading,
+        first_measure: first,
+        second_measure: second,
+        third_measure: third_,
         // overall_measure: roundedOverAll,
       
       };
-      const url = 'https://juwons.herokuapp.com/readings';
+      const url = 'http://127.0.0.1:3005/readings';
       postData(url, userInput);
  };
  if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token') === null) {
@@ -52,9 +53,9 @@ return (
     <Navbar title="Add measurement"/>
     <main>
       <form onSubmit={(e) => handleAddingCalories(e)} className="measurement">
-        <AssessmentForm meal="first_measure" />
-        <AssessmentForm meal="second_measure" />
-        <AssessmentForm meal="third_measure" />
+        <AssessmentForm measure="first_measure" />
+        <AssessmentForm measure="second_measure" />
+        <AssessmentForm measure="third_measure" />
         <button type="submit">Submit your entry</button>
       </form>
     </main>

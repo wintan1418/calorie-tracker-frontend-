@@ -18,7 +18,7 @@ const AssessmentForm = ({ measure }) => {
         <label htmlFor={measure}>{measure}</label>
         <input
           type="number"
-          step=".5"
+          step=".1"
           min="0"
           max="9"
           name={measure}
@@ -34,7 +34,7 @@ const AssessmentForm = ({ measure }) => {
 export default AssessmentForm;
 
 AssessmentForm.propTypes = {
-  measure: PropTypes.instanceOf(Object).isRequired,
+  measure: PropTypes.string.isRequired,
 };
 
 

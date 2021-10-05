@@ -4,7 +4,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import baseReducer from './reducer/baseReducer';
 
 const groundState = {
-  readings: {},detailReading: {},currentUser: {},
+  readings: [], detailReading: {},currentUser: {},
 };
 
 const middleware = [thunk];

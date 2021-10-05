@@ -13,8 +13,8 @@ const Progress = ({ fetchReadings, readings }) => {
   if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token') === null) {
     return <Redirect to="/log_in" />;
   }
-  return readings.readings !== undefined
-    ? (<TrackProgress readings={readings.readings} />)
+  return readings !== undefined
+    ? (<TrackProgress readings={readings} />)
     : <h2>Loading...</h2>;
 };
 const mapStateToProps = (state) => ({
