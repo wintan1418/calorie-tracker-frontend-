@@ -22,7 +22,7 @@ const LogIn = () => {
       password: e.target[1].value,
     };
 
-    const urlLogIn = 'https://welltrack-api.herokuapp.com/auth/login';
+    const urlLogIn = 'https://juwons.herokuapp.com/auth/login';
     postData(urlLogIn, userInput);
   };
 

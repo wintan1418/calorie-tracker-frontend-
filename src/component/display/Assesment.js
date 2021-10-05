@@ -29,19 +29,19 @@ const Assesment = () => {
    const second_measure_reading = e.target[1].value;
    const third_measure_reading = e.target[2].value;
   
-   const preOverAll = (
-     parseFloat(first_measure_reading) + parseFloat(second_measure_reading) + parseFloat(third_measure_reading))/3;
+  //  const preOverAll = (
+  //    parseFloat(first_measure_reading) + parseFloat(second_measure_reading) + parseFloat(third_measure_reading))/3;
 
-     const roundedOverAll = Math.round(preOverAll * 10)/ 10;
+  //    const roundedOverAll = Math.round(preOverAll * 10)/ 10;
    
       const userInput = {
         first_measure: first_measure_reading,
         second_measure: second_measure_reading,
         third_measure: third_measure_reading,
-        overall_measure: roundedOverAll,
+        // overall_measure: roundedOverAll,
       
       };
-      const url = 'https://welltrack-api.herokuapp.com/readings';
+      const url = 'https://juwons.herokuapp.com/readings';
       postData(url, userInput);
  };
  if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token') === null) {

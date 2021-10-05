@@ -13,6 +13,7 @@ const Register = () => {
     });
     return response.json()
       .then((data) => {
+        console.log(data)
         sessionStorage.setItem('token', JSON.stringify(data.auth_token));
         history.push('/assesment');
       });
@@ -31,7 +32,7 @@ const Register = () => {
       
     };
 
-    const urlregister = 'http://localhost:3000/register';
+    const urlregister = 'https://juwons.herokuapp.com/register';
     postData(urlregister, userInput);
   };
   return (

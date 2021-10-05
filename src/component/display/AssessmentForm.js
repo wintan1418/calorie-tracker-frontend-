@@ -34,7 +34,7 @@ const AssessmentForm = ({ measure }) => {
 export default AssessmentForm;
 
 AssessmentForm.propTypes = {
-  exam: PropTypes.instanceOf(Object).isRequired,
+  measure: PropTypes.instanceOf(Object).isRequired,
 };
 
 

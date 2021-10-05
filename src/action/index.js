@@ -6,7 +6,7 @@ import {
 
 const fetchReadings =() => (dispatch) => {
   const abortCont = new AbortController();
-  const url = 'https://welltrack-api.herokuapp.com/readings';
+  const url = 'https://juwons.herokuapp.com/readings';
   const token = sessionStorage.getItem('token')
   fetch(url, {
     headers: {
@@ -44,7 +44,7 @@ const fetchDetailReadings = (readingID) => (dispatch) => {
 
 const fetchCurrentUser = () => (dispatch) => {
   const abortCont = new AbortController();
-  const url = 'https://welltrack-api.herokuapp.com/info';
+  const url = 'https://wintan.herokuapp.com/info';
   const token = sessionStorage.getItem('token');
   fetch(url, {
     headers: {
