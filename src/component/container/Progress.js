@@ -15,7 +15,7 @@ const Progress = ({ fetchReadings, readings }) => {
   }
   return readings !== undefined
     ? (<TrackProgress readings={readings} />)
-    : <h2>Loading...</h2>;
+    : <h2 className="wait">Loading...</h2>;
 };
 const mapStateToProps = (state) => ({
   readings: state.readings,

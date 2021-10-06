@@ -12,7 +12,7 @@ const Chart = ({ readings, currentUser, fetchCurrentUser }) => {
 
   return currentUser !== undefined
     ? <TrackLineChart readings={readings} currentUser={currentUser} />
-    : <h3>Buffering...</h3>;
+    : <h3 className="wait">Buffering...</h3>;
 };
 
 const mapStateToProps = (state) => ({

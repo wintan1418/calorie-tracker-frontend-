@@ -20,7 +20,7 @@ const Tracker = ({fetchReadings, fetchDetailReadings, readings}) => {
   console.log(readings, readings.readings)
 return readings !== undefined
   ? (<Map readings={readings} clickOnDetailReadings={clickOnDetailReadings} />)
-  : <h3 className="t-empty">Wait While Loading...</h3>;
+  : <h3 className="wait">Wait While Loading...</h3>;
 };
 
 

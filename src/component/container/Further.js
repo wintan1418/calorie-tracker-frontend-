@@ -15,7 +15,7 @@ const Further = ({ currentUser, fetchCurrentUser }) => {
   }
   return currentUser !== undefined
   ? <TrackFurther currentUser={currentUser} />
-  : <h3>Loading...</h3>;
+  : <h3 className="wait">Loading...</h3>;
 };
 
 const mapStateToProps = (state) => ({

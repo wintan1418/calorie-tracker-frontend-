@@ -216,7 +216,7 @@ main {
   margin: 0 auto;
 }
 
-/* Track page */
+/* Tracker page */
 .track {
   justify-content: space-between;
 }
@@ -234,7 +234,7 @@ main {
   width: 12%;
 }
 
-/* result detail */
+/* reading detail */
 .t-con {
   display: flex;
   flex-direction: column;
@@ -280,7 +280,7 @@ main {
   text-align: center;
 }
 
-.t-empty {
+.wait {
   color: var(--second);
   width: 80%;
   margin: 1rem auto 0 auto;
