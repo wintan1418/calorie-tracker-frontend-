@@ -6,11 +6,12 @@ import {
 
 const fetchReadings =() => (dispatch) => {
   const abortCont = new AbortController();
-  const url = 'http://127.0.0.1:3005/readings';
+  const url = 'https://healthjuwon.herokuapp.com/readings';
   const token = sessionStorage.getItem('token')
   fetch(url, {
     headers: {
-      Authorization: `Bearer ${token}`,
+      // Authorization: `Bearer ${token}`,
+      Authorization: token,
     },
   })
     .then((res) => res.json())
@@ -25,7 +26,7 @@ const fetchReadings =() => (dispatch) => {
 
 const fetchDetailReadings = (readingID) => (dispatch) => {
   const abortCont = new AbortController();
-  const url = `http://127.0.0.1:3005/readings/${readingID}`;
+  const url = `https://healthjuwon.herokuapp.com/readings/${readingID}`;
   const token = sessionStorage.getItem('token');
   fetch(url, {
     headers: {
@@ -44,7 +45,7 @@ const fetchDetailReadings = (readingID) => (dispatch) => {
 
 const fetchCurrentUser = () => (dispatch) => {
   const abortCont = new AbortController();
-  const url = 'http://127.0.0.1:3000/info';
+  const url = 'https://healthjuwon.herokuapp.com/info';
   const token = sessionStorage.getItem('token');
   fetch(url, {
     headers: {

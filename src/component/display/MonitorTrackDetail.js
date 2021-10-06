@@ -21,24 +21,24 @@ const MonitorTrackDetail = ({ detailReading }) => {
       <Navbar title="Calorie-cop" />
       <div className="t-con">
         <div className="t-date">{readableDate(detailReading.created_at)}</div>
-        <CircularProgressbar value={detailReading.overall_score} maxValue={9} text={`Overall Score\n ${detailReading.overall_score}`} />
+        <CircularProgressbar value={detailReading.overall_score} maxValue={9} text={`Overall meausre\n ${detailReading.overall_measure}`} />
         <div className="t-measures">
           <div>
-            <i className="fas fa-mic" />
+            <i className="fas fa-sun" />
             <div>
               Morning:
               {detailReading.first_measure}
             </div>
           </div>
           <div>
-            <i className="fas fa-" />
+            <i className="fas fa-sun" />
             <div>
               Afternoon:
               {detailReading.second_measure}
             </div>
           </div>
           <div>
-            <i className="fas fa-" />
+            <i className="fas fa-moon" />
             <div>
               Evening:
               {detailReading.third_measure}

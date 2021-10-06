@@ -21,12 +21,12 @@ const Map = ({ readings, clickOnDetailReadings }) => {
   return (
     <div>
       <Navbar title="calorie-cop" />
-      <main className="track">
+      <main className="tracker">
         {
                     readings.slice(0).reverse().map((res) => (
                       <Link
                         to={{
-                          pathname: `/track/${res.id}`,
+                          pathname: `/tracker/${res.id}`,
                           state: res,
                         }}
                         key={res.id}

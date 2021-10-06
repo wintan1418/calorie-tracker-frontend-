@@ -28,21 +28,21 @@ const Assesment = () => {
    e.preventDefault();
    const first = e.target[0].value;
    const second = e.target[1].value;
-   const third_= e.target[2].value;
+   const third= e.target[2].value;
   
-  //  const preOverAll = (
-  //    parseFloat(first_measure_reading) + parseFloat(second_measure_reading) + parseFloat(third_measure_reading))/3;
+   const preOverAll = (
+     parseFloat(first) + parseFloat(second) + parseFloat(third))/3;
 
-  //    const roundedOverAll = Math.round(preOverAll * 10)/ 10;
+     const roundedOverAll = Math.round(preOverAll * 10)/ 10;
    
       const userInput = {
         first_measure: first,
         second_measure: second,
-        third_measure: third_,
-        // overall_measure: roundedOverAll,
+        third_measure: third,
+        overall_measure: roundedOverAll,
       
       };
-      const url = 'http://127.0.0.1:3005/readings';
+      const url = 'https://healthjuwon.herokuapp.com//readings';
       postData(url, userInput);
  };
  if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token') === null) {

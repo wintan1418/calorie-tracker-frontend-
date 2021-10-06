@@ -8,9 +8,10 @@ const Chart = ({ readings, currentUser, fetchCurrentUser }) => {
   useEffect(() => {
     fetchCurrentUser();
   }, [fetchCurrentUser]);
+  console.log(currentUser, currentUser.currentUser)
 
-  return currentUser.currentUser !== undefined
-    ? <TrackLineChart readings={readings} currentUser={currentUser.currentUser} />
+  return currentUser !== undefined
+    ? <TrackLineChart readings={readings} currentUser={currentUser} />
     : <h3>Buffering...</h3>;
 };
 

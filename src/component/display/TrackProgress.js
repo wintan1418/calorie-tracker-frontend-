@@ -2,7 +2,7 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import PropTypes from 'prop-types';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import MyChart from '../container/Chart';
+import Chart from '../container/Chart';
 
 const TrackProgress = ({ readings }) => {
   const currentMeasures = readings[readings.length - 1];
@@ -11,17 +11,17 @@ const TrackProgress = ({ readings }) => {
       <Navbar title="Progress" />
       <main>
         <h3 className="g-title">Judge your progress.</h3>
-        <MyChart readings={readings} />
+        <Chart readings={readings} />
         <div className="g-description">
-          <div>Blue - actual data</div>
-          <div>Red - planned data</div>
+          <div>Blue - present data</div>
+          <div>Red - proposed data</div>
         </div>
         {
                     currentMeasures
                       ? (
                         <div className="progress">
                           <h3>Current Measure</h3>
-                          <CircularProgressbar value={currentMeasures.overall_score} maxValue={9} text={`Overall Score\n ${currentMeasures.overall_score}`} />
+                          <CircularProgressbar value={currentMeasures.overall_score} maxValue={9} text={`Average Measure\n ${currentMeasures.overall_measure}`} />
                           <div className="t-measures">
                             <div>
                               <i className="fas fa-heartbeat" />
@@ -48,7 +48,7 @@ const TrackProgress = ({ readings }) => {
                           </div>
                         </div>
                       )
-                      : <div>Loading...</div>
+                      : <div className="empty">Please update...</div>
                     }
                     </main>
                     <Footer />

@@ -20,7 +20,7 @@ function App() {
       <Route exact path="/Register" component={Register} />
       <Route exact path="/Assesment" component={Assesment} />
       <Route exact path="/tracker" component={Tracker} />
-      <Route exact path="/track/:id" component={TrackDetail} />
+      <Route exact path="/tracker/:id" component={TrackDetail} />
       <Route exact path="/progress" component={Progress} />
       <Route exact path="/further" component={Further} />
       <Route exact path="/" component={LogIn} />

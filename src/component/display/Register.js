@@ -15,7 +15,7 @@ const Register = () => {
       .then((data) => {
         console.log(data)
         sessionStorage.setItem('token', JSON.stringify(data.auth_token));
-        history.push('/assesment');
+        history.push('/log_in');
       });
   }
   const handleRegister = async (e) => {
@@ -32,7 +32,7 @@ const Register = () => {
       
     };
 
-    const urlregister = 'http://127.0.0.1:3000/register';
+    const urlregister = 'https://healthjuwon.herokuapp.com/register';
     postData(urlregister, userInput);
   };
   return (

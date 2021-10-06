@@ -6,7 +6,7 @@ const TrackLineChart = ({ readings, currentUser }) => {
   function defChartData(readings) {
     const arr = [];
     readings.map((res) => {
-      arr.push([readings.indexOf(res) + 1, parseFloat(res.overall_score)]);
+      arr.push([readings.indexOf(res) + 1, parseFloat(res.overall_measure)]);
       return arr;
     });
 
@@ -21,16 +21,16 @@ const TrackLineChart = ({ readings, currentUser }) => {
   function defPlannedChartData() {
     const proposedMeasure = parseFloat(currentUser.present_measure);
     const presentMeasure = parseFloat(currentUser.proposed_measure);
-    const diffScore = proposedMeasure - presentMeasure;
+    const diffMeasure = proposedMeasure - presentMeasure;
 
-    const executionPeriod = 30;
+    const executionPeriod = 15;
 
-    const requiredDailyProgress = diffScore / executionPeriod;
+    const requiredDailyMeasure = diffMeasure / executionPeriod;
 
     const arr = [[0, presentMeasure]];
     let current = presentMeasure;
     for (let i = 1; i <= executionPeriod; i += 1) {
-      arr.push([i, current += requiredDailyProgress]);
+      arr.push([i, current += requiredDailyMeasure]);
     }
 
     const output = {
@@ -59,8 +59,7 @@ const TrackLineChart = ({ readings, currentUser }) => {
   );
 
   const lineChart = (
-    // A react-chart hyper-responsively and continuously fills the available
-    // space of its parent element automatically
+   
     <div className="graph">
       <Chart data={data} axes={axes} />
     </div>

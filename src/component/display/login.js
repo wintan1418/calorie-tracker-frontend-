@@ -22,7 +22,7 @@ const LogIn = () => {
       password: e.target[1].value,
     };
 
-    const urlLogIn = 'http://127.0.0.1:3005/auth/login';
+    const urlLogIn = 'https://healthjuwon.herokuapp.com//auth/login';
     postData(urlLogIn, userInput);
   };
 
