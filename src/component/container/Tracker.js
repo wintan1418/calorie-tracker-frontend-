@@ -17,7 +17,6 @@ const Tracker = ({ fetchReadings, fetchDetailReadings, readings }) => {
   if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token') === null) {
     return <Redirect to="/log_in" />;
   }
-  console.log(readings, readings.readings);
   return readings !== undefined
     ? (<Map readings={readings} clickOnDetailReadings={clickOnDetailReadings} />)
     : <h3 className="wait">Wait While Loading...</h3>;

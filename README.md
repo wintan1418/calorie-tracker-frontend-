@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# calorie Tracker 
+This app is a built using React/Redux and Ruby on Rails framework,a fullstack scoped web app that enable user to register with,present calorie measure and proposed calorie measure,in which he has an account and can login to give three measures daily..(morning,afternoon and evening),This app is responsive,you can view and use it on different screen sizes.
 
-## Available Scripts
+# Live demo link
 
-In the project directory, you can run:
+<a href="https://wonderful-kowalevski-cb2866.netlify.app/"><img src='https://www.netlify.com/img/deploy/button.svg'></a>
 
-### `npm start`
+# Screenshot of the Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![first view](cal1.png),
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![second view](cal2.png)
 
-### `npm test`
+# Highlight
+* You can create an account by signing up
+* You can login with your email and password.
+* You can set a calorie measure goal by adhering  to a strict measure update on the app which helps you track your progress as agains your proposed measure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## stacks
 
-### `npm run build`
+- [React.js](https://reactjs.org/)
+- [Redux](https://redux.js.org/)/[React-Redux pkg](https://react-redux.js.org/)
+- [Ruby on Rails](https://rubyonrails.org/)
+- [JSON Web Tokens (JWT)](https://jwt.io/)
+- [RSpec](https://rspec.info/)
+- [react-charts](https://www.npmjs.com/package/react-charts)
+- [npm](https://www.npmjs.com/)
+- [JavaScript](https://www.javascript.com/)
+- [JEST](https://jestjs.io/)
+- [React Testing Library](https://github.com/testing-library/react-testing-library)
+- [HTML](https://html.spec.whatwg.org/)/[CSS](https://www.w3.org/TR/CSS/#css)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Getting Started with the project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-git clone https://github.com/wintan1418/-calorie-tracker-frontend-.git 
+-cd into calorie-tracker-frontend-
+-bundle i dependencies
+-run npm start to view in browser
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### test
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+On the terminal run "nmp test"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+# Author
+## **Oluwadare juwon**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Github: [@Oluwadare Juwon](https://github.com/wintan1418)
+- Linkedin: (www.linkedin.com/in/oluwintan)
+- Twitter: [Oluwadare-juwon](https://twitter.com/@oluwadarejuwon)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## 🙋‍♂ show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+give a ⭐️ if you like this project!
 
-### Analyzing the Bundle Size
+## 📝 license
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](LICENSE) licensed.
