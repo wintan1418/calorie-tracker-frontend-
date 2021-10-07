@@ -10,7 +10,7 @@ const TrackDetail = ({ detailReadings, fetchDetailReadings }) => {
   useEffect(() => {
     fetchDetailReadings(id);
   }, [fetchDetailReadings, id]);
-  console.log(detailReadings)
+  console.log(detailReadings);
   return (
     <main>
       {
@@ -18,7 +18,9 @@ const TrackDetail = ({ detailReadings, fetchDetailReadings }) => {
             ? <MonitorTrackDetail detailReading={detailReadings} />
             : (
               <h3 className="wait">
-                Loading... </h3>
+                Loading...
+                {' '}
+              </h3>
             )
         }
     </main>

@@ -27,5 +27,3 @@ Progress.propTypes = {
   readings: PropTypes.instanceOf(Object).isRequired,
   fetchReadings: PropTypes.func.isRequired,
 };
-
- 

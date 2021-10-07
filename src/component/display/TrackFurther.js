@@ -22,7 +22,7 @@ const TrackFurther = ({ currentUser }) => (
           </div>
         </div>
         <div>
-        <i className="fas fa-clipboard" />
+          <i className="fas fa-clipboard" />
           <div>
             current calorie state
             {currentUser.level_initial}

@@ -4,10 +4,10 @@ import {
   FETCH_CURRENT_USER,
 } from './categories';
 
-const fetchReadings =() => (dispatch) => {
+const fetchReadings = () => (dispatch) => {
   const abortCont = new AbortController();
   const url = 'https://healthjuwon.herokuapp.com/readings';
-  const token = sessionStorage.getItem('token')
+  const token = sessionStorage.getItem('token');
   fetch(url, {
     headers: {
       // Authorization: `Bearer ${token}`,
@@ -21,7 +21,7 @@ const fetchReadings =() => (dispatch) => {
 
     }));
 
-    return () => abortCont.abort();
+  return () => abortCont.abort();
 };
 
 const fetchDetailReadings = (readingID) => (dispatch) => {
@@ -37,10 +37,10 @@ const fetchDetailReadings = (readingID) => (dispatch) => {
     .then((res) => res.json())
     .then((data) => dispatch({
       type: FETCH_DETAIL_READINGS,
-        payload: data,
+      payload: data,
 
     }));
-     return() => abortCont.abort();
+  return () => abortCont.abort();
 };
 
 const fetchCurrentUser = () => (dispatch) => {
@@ -56,12 +56,12 @@ const fetchCurrentUser = () => (dispatch) => {
     .then((res) => res.json())
     .then((data) => dispatch({
       type: FETCH_CURRENT_USER,
-        payload: data,
+      payload: data,
 
     }));
-     return() => abortCont.abort();
+  return () => abortCont.abort();
 };
 
 export {
-  fetchReadings,fetchCurrentUser, fetchDetailReadings,
+  fetchReadings, fetchCurrentUser, fetchDetailReadings,
 };

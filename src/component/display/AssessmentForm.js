@@ -1,13 +1,13 @@
-import React, {useState} from "react";
-import {CircularProgressbar } from 'react-circular-progressbar';
+import React, { useState } from 'react';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import PropTypes from 'prop-types';
 import '../../circle.css';
 
 const AssessmentForm = ({ measure }) => {
   const [cirValue, setcircleValue] = useState(0);
-  
+
   const setMeasureValue = (e) => {
-    setcircleValue(parseFloat(e.target.value).toFixed(1))
+    setcircleValue(parseFloat(e.target.value).toFixed(1));
   };
 
   return (
@@ -36,5 +36,3 @@ export default AssessmentForm;
 AssessmentForm.propTypes = {
   measure: PropTypes.string.isRequired,
 };
-
-

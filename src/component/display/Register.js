@@ -13,7 +13,7 @@ const Register = () => {
     });
     return response.json()
       .then((data) => {
-        console.log(data)
+        console.log(data);
         sessionStorage.setItem('token', JSON.stringify(data.auth_token));
         history.push('/log_in');
       });
@@ -27,9 +27,8 @@ const Register = () => {
       present_measure: e.target[3].value,
       proposed_measure: e.target[4].value,
       age: e.target[5].value,
-      sex: e.target[6].value
-  
-      
+      sex: e.target[6].value,
+
     };
 
     const urlregister = 'https://healthjuwon.herokuapp.com/register';
@@ -46,7 +45,6 @@ const Register = () => {
         <input type="password" placeholder="Password" required />
         <input type="age" placeholder="Your age please" required />
         <input type="sex" placeholder="male/female" required />
-      
 
         <label htmlFor="present_measure">
           <span>Your current calorie  measure</span>

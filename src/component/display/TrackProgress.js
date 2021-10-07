@@ -44,21 +44,20 @@ const TrackProgress = ({ readings }) => {
                                 {currentMeasures.third_measure}
                               </div>
                             </div>
-                            
+
                           </div>
                         </div>
                       )
                       : <div className="empty">Please update...</div>
                     }
-                    </main>
-                    <Footer />
-                  </div>
-                );
-              };
-              
-              export default TrackProgress;
-              
-              TrackProgress.propTypes = {
-                readings: PropTypes.instanceOf(Object).isRequired,
-              };
-              
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default TrackProgress;
+
+TrackProgress.propTypes = {
+  readings: PropTypes.instanceOf(Object).isRequired,
+};

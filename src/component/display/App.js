@@ -10,23 +10,21 @@ import Progress from '../container/Progress';
 import Further from '../container/Further';
 import Error from './Error';
 
-
-
 function App() {
-  return(
+  return (
     <BrowserRouter>
-    <Switch>
-      <Route exact path="/log_in" component={LogIn} />
-      <Route exact path="/Register" component={Register} />
-      <Route exact path="/Assesment" component={Assesment} />
-      <Route exact path="/tracker" component={Tracker} />
-      <Route exact path="/tracker/:id" component={TrackDetail} />
-      <Route exact path="/progress" component={Progress} />
-      <Route exact path="/further" component={Further} />
-      <Route exact path="/" component={LogIn} />
-      <Route component={Error} />
-    </Switch>
+      <Switch>
+        <Route exact path="/log_in" component={LogIn} />
+        <Route exact path="/Register" component={Register} />
+        <Route exact path="/Assesment" component={Assesment} />
+        <Route exact path="/tracker" component={Tracker} />
+        <Route exact path="/tracker/:id" component={TrackDetail} />
+        <Route exact path="/progress" component={Progress} />
+        <Route exact path="/further" component={Further} />
+        <Route exact path="/" component={LogIn} />
+        <Route component={Error} />
+      </Switch>
     </BrowserRouter>
-  )
+  );
 }
 export default App;

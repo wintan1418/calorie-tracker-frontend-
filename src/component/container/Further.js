@@ -6,16 +6,16 @@ import { fetchCurrentUser } from '../../action/index';
 import TrackFurther from '../display/TrackFurther';
 
 const Further = ({ currentUser, fetchCurrentUser }) => {
-  useEffect (() => {
+  useEffect(() => {
     fetchCurrentUser();
   }, [fetchCurrentUser]);
-  
-  if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token')=== null) {
+
+  if (sessionStorage.getItem('token') === 'undefined' || sessionStorage.getItem('token') === null) {
     return <Redirect to="/login" />;
   }
   return currentUser !== undefined
-  ? <TrackFurther currentUser={currentUser} />
-  : <h3 className="wait">Loading...</h3>;
+    ? <TrackFurther currentUser={currentUser} />
+    : <h3 className="wait">Loading...</h3>;
 };
 
 const mapStateToProps = (state) => ({

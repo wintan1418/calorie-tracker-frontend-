@@ -1,4 +1,4 @@
-import { FETCH_CURRENT_USER } from "../action/categories";
+import { FETCH_CURRENT_USER } from '../action/categories';
 
 const currentUserReducer = (state = {}, action) => {
   switch (action.type) {
@@ -8,8 +8,8 @@ const currentUserReducer = (state = {}, action) => {
         currentUser: action.payload,
 
       };
-       default:
-         return state;
+    default:
+      return state;
   }
 };
-export default currentUserReducer
+export default currentUserReducer;

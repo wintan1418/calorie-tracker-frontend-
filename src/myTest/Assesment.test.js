@@ -3,10 +3,10 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import Assesment from '../component/display/Assesment';
 
-it ('renders accurately', ()=> {
+it('renders accurately', () => {
   const tree = renderer.create(
     <BrowserRouter>
-    <Assesment/>
+      <Assesment />
     </BrowserRouter>,
   ).toJSON();
   expect(tree).toMatchSnapshot();
