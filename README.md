@@ -35,7 +35,7 @@ This app is a built using React/Redux and Ruby on Rails framework,a fullstack sc
 
 # Getting Started with the project
 
--git clone https://github.com/wintan1418/-calorie-tracker-frontend-.git 
+-git clone https://github.com/wintan1418/calorie-tracker-frontend- 
 -cd into calorie-tracker-frontend-
 -bundle i dependencies
 -run npm start to view in browser
