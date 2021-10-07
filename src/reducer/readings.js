@@ -1,6 +1,6 @@
 import { FETCH_READINGS } from "../action/categories";
 
-const ReadingsReducer = (state = [], action) => {
+const readingsReducer = (state = [], action) => {
   switch (action.type) {
     case FETCH_READINGS:
       return action.payload
@@ -8,4 +8,4 @@ const ReadingsReducer = (state = [], action) => {
          return state;
   }
 };
-export default ReadingsReducer
+export default readingsReducer

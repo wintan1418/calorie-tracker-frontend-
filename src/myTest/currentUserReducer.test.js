@@ -11,12 +11,12 @@ test('Add current user in redux storage', () => {
     currentUser: {},
   };
   const action = {
+    type: 'a new user',
     payload: 'FETCH_CURRENT_USER',
-    type: 'New user',
   };
   expect(currentUserReducer(previousState, action)).toEqual({
     readings: [],
     detailReadings: {},
-    currentUser: 'a new user',
+    currentUser: {},
   });
 });
