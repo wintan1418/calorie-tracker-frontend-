@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders accurately 1`] = `
+<div
+  className="authen-page"
+>
+  <div>
+    <i
+      className="fas fa-user-circle"
+    />
+  </div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      placeholder="Your email"
+      required={true}
+      type="email"
+    />
+    <input
+      placeholder="Password"
+      required={true}
+      type="password"
+    />
+    <button
+      type="submit"
+    >
+      Log in
+    </button>
+  </form>
+  <div
+    className="authen-text"
+  >
+    <div>
+      Yet to sign up? click here
+    </div>
+    <div>
+      Go to
+      <a
+        href="/register"
+        onClick={[Function]}
+      >
+        Sign up page
+      </a>
+    </div>
+  </div>
+  <div
+    className="calorie-text authen-text"
+  />
+</div>
+`;

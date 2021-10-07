@@ -1,11 +1,11 @@
 import React from "react";
-import { Provider } from "react";
+import { Provider } from "react-redux";
 import renderer, {act} from 'react-test-renderer';
 import { BrowserRouter } from "react-router-dom";
 import store from '../reduxStore';
 import TrackProgress from "../component/display/TrackProgress";
 
-it('renders correctly', () => {
+it('renders accurately', () => {
   const readings = [];
   let tree;
   act(() => {

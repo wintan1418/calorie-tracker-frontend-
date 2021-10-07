@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders accurately 1`] = `
+<div>
+  <h1
+    className="wait"
+  >
+    ohh! seems page is ghosted
+  </h1>
+</div>
+`;
