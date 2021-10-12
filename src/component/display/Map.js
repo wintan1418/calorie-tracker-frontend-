@@ -17,7 +17,7 @@ const Map = ({ readings, clickOnDetailReadings }) => {
     const newdate = `${month}-${day}-${year}`;
     return newdate;
   };
-  console.log(readings, 'Map!!!!!!!!');
+
   return (
     <div>
       <Navbar title="calorie-cop" />

@@ -8,7 +8,6 @@ const Chart = ({ readings, currentUser, fetchCurrentUser }) => {
   useEffect(() => {
     fetchCurrentUser();
   }, [fetchCurrentUser]);
-  console.log(currentUser, currentUser.currentUser);
 
   return currentUser !== undefined
     ? <TrackLineChart readings={readings} currentUser={currentUser} />

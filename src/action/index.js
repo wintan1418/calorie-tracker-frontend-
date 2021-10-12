@@ -45,7 +45,7 @@ const fetchDetailReadings = (readingID) => (dispatch) => {
 
 const fetchCurrentUser = () => (dispatch) => {
   const abortCont = new AbortController();
-  const url = 'https://healthjuwon.herokuapp.com/info';
+  const url = 'https://healthjuwon.herokuapp.com/details';
   const token = sessionStorage.getItem('token');
   fetch(url, {
     headers: {
