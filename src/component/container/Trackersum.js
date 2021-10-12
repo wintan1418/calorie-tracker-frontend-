@@ -10,7 +10,7 @@ const TrackDetail = ({ detailReadings, fetchDetailReadings }) => {
   useEffect(() => {
     fetchDetailReadings(id);
   }, [fetchDetailReadings, id]);
-  console.log(detailReadings);
+
   return (
     <main>
       {

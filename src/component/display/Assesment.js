@@ -8,7 +8,6 @@ const Assesment = () => {
   const history = useHistory();
 
   async function postData(url = '', data = {}) {
-    console.log(data);
     const token = sessionStorage.getItem('token');
     const response = await fetch(url, {
       method: 'POST',

@@ -13,7 +13,6 @@ const Register = () => {
     });
     return response.json()
       .then((data) => {
-        console.log(data);
         sessionStorage.setItem('token', JSON.stringify(data.auth_token));
         history.push('/log_in');
       });
